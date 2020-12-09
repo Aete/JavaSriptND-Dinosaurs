@@ -34,8 +34,14 @@
         <p>Height</p>
         <label>
           Feet:
-          <input id="feet" class="form-field__short" type="number" name="feet"
-        /></label>
+          <input
+            id="feet"
+            class="form-field__short"
+            type="number"
+            name="feet"
+            oninput="feetToInches()"
+          />
+        </label>
         <label>
           inches:
           <input
@@ -43,6 +49,7 @@
             class="form-field__short"
             type="number"
             name="inches"
+            oninput="inchesToFeet()"
           />
         </label>
         <p>Weight:</p>
@@ -60,7 +67,7 @@
           <option>Omnivor</option>
           <option>Carnivor</option>
         </select>
-        <div id="btn">Compare Me!</div>
+        <div id="btn" onClick="clickButtion()">Compare Me!</div>
       </div>
     </form>
     <!-- .grid to attach tiles to -->
